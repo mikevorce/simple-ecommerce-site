@@ -12,19 +12,20 @@ import Default from './components/Default'
 
 import logo from './logo.svg';
 
-
-function App() {
-  return (
-  	<React.Fragment>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={ProductList} />
-        <Route path="/details" component={Details} />
-        <Route path="/cart" component={Cart} />
-        <Route component={Default} />
-      </Switch>
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return (
+    	<React.Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={ProductList} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          <Route component={Default} />
+        </Switch>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
